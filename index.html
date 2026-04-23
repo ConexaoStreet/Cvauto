@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shark Dashboard — painel visual com animação interativa e interface moderna." />
+  <title>Shark Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="whale" aria-hidden="true"></div>
+  <div class="page-shell"></div>
+
+  <main class="app">
+    <aside class="sidebar panel">
+      <div class="brand-block">
+        <div class="brand-mark">🦈</div>
+        <div>
+          <p class="eyebrow">Painel premium</p>
+          <h1>Shark Dashboard</h1>
+        </div>
+      </div>
+
+      <div class="status-card">
+        <div class="status-head">
+          <span class="status-dot"></span>
+          <strong id="systemStatus">Sistema online</strong>
+        </div>
+        <p id="statusMessage">Monitorando eventos e mantendo o fluxo estável.</p>
+      </div>
+
+      <nav class="nav" aria-label="Seções principais">
+        <button class="nav-item active" data-panel="overview">Visão geral</button>
+        <button class="nav-item" data-panel="automation">Automação</button>
+        <button class="nav-item" data-panel="analytics">Analytics</button>
+        <button class="nav-item" data-panel="settings">Configurações</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>Experiência refeita com estrutura limpa, animação funcional e layout responsivo.</p>
+      </div>
+    </aside>
+
+    <section class="content">
+      <header class="topbar panel">
+        <div>
+          <p class="eyebrow">Centro de comando</p>
+          <h2 id="panelTitle">Visão geral do sistema</h2>
+        </div>
+        <div class="topbar-actions">
+          <button class="ghost-btn" id="pulseToggle">Pausar animação</button>
+          <button class="primary-btn" id="refreshData">Atualizar métricas</button>
+        </div>
+      </header>
+
+      <section class="metrics-grid">
+        <article class="metric panel">
+          <span class="metric-label">Eventos hoje</span>
+          <strong id="metricEvents">142</strong>
+          <small>Última atualização em <span id="currentTime">--:--</span></small>
+        </article>
+        <article class="metric panel">
+          <span class="metric-label">Próximo ciclo</span>
+          <strong id="metricCycle">05 min</strong>
+          <small>Ritmo adaptativo em tempo real</small>
+        </article>
+        <article class="metric panel">
+          <span class="metric-label">Estabilidade</span>
+          <strong id="metricStability">99.2%</strong>
+          <small id="metricPing">Latência média: 28 ms</small>
+        </article>
+      </section>
+
+      <section class="panel-stack">
+        <article class="panel content-panel active" id="panel-overview">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Resumo</p>
+              <h3>Projeto reorganizado e pronto para evoluir</h3>
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-card">
+              <strong>Estrutura corrigida</strong>
+              <p>HTML, CSS e JavaScript foram separados de forma limpa. Nada de arquivo solto sem uso.</p>
+            </div>
+            <div class="info-card">
+              <strong>Animação restaurada</strong>
+              <p>A arte do <code>foca.txt</code> voltou a funcionar como fundo interativo real do projeto.</p>
+            </div>
+            <div class="info-card">
+              <strong>Layout responsivo</strong>
+              <p>Interface adaptada para desktop, tablet e mobile sem quebrar a experiência visual.</p>
+            </div>
+            <div class="info-card">
+              <strong>Base profissional</strong>
+              <p>Agora o projeto parece produto de verdade, não só um rascunho visual.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel content-panel" id="panel-automation">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Fluxo</p>
+              <h3>Pipeline de automação</h3>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span>01</span>
+              <div>
+                <strong>Entrada</strong>
+                <p>Recebimento de dados, validação e preparação da fila.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span>02</span>
+              <div>
+                <strong>Processamento</strong>
+                <p>Tratamento automático com feedback visual de estabilidade e ritmo.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span>03</span>
+              <div>
+                <strong>Execução</strong>
+                <p>Saída controlada com monitoramento contínuo e atualização imediata na interface.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel content-panel" id="panel-analytics">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Medições</p>
+              <h3>Leitura rápida do desempenho</h3>
+            </div>
+          </div>
+          <div class="bars" aria-label="Indicadores visuais">
+            <div class="bar-row"><span>Entrega</span><div class="bar"><i style="width:86%"></i></div><b>86%</b></div>
+            <div class="bar-row"><span>Consistência</span><div class="bar"><i style="width:93%"></i></div><b>93%</b></div>
+            <div class="bar-row"><span>Resposta</span><div class="bar"><i style="width:78%"></i></div><b>78%</b></div>
+          </div>
+        </article>
+
+        <article class="panel content-panel" id="panel-settings">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Ajustes</p>
+              <h3>Controles rápidos da interface</h3>
+            </div>
+          </div>
+          <div class="settings-grid">
+            <label class="toggle-card">
+              <span>Realce do painel</span>
+              <input type="checkbox" id="glowToggle" checked />
+            </label>
+            <label class="toggle-card">
+              <span>Modo compacto</span>
+              <input type="checkbox" id="compactToggle" />
+            </label>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
